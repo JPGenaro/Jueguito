@@ -1,0 +1,82 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.flex-container-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.almedio{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container-column{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.flex-item{
+    justify-content: center;
+    align-items: center;
+
+
+    max-width: 1000px;
+}
+
+
+.padder{
+    padding: 10px;
+}
+
+.marginner{
+    margin: 5px;
+}
+/*this proyect*/
+.registro-holder{
+    width: 50%;
+    background-color: black;
+
+    border: 15px solid rgb(58, 58, 58);
+
+}
+
+.marco-style{
+    display: flex;
+
+    overflow-x: auto;
+
+    max-height: 450px;
+    min-height: 450px;
+
+    padding-top: 10%;
+    width: 50%;
+
+    background-color: brown;
+}
+
+
+tr{
+    background-color: aliceblue;
+}
+.tele{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-marco{
+    height: 200px;
+    width: 150px;
+    border-radius: 5px;
+}
