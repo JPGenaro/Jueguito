@@ -14,3 +14,59 @@ body{
     padding-bottom: 20px;
     text-shadow: #ffffff 0 0 10px;
 }
+
+/* FORMULARIO */
+.form {
+    background-color: white;
+    color: black;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    flex-direction: column;
+    text-decoration: underline;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.form-aux{
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.form-titulo{
+    text-align: center;
+}
+
+.form input{
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+}
+
+/* BOTONES */
+.btn{
+    cursor: pointer;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #ffffff;
+    margin: 15px 0;
+    margin-right: 40px;
+    float: right;
+}
+
+.btn:hover{
+    text-shadow: #ffffff 0 0 10px; 
+}
+
+/* COMBO BOX */
+.comboBox{
+    width: 91%;
+    height: 35px;
+    margin: 10px;
+    margin-right: 42px;
+    float: right;
+}
