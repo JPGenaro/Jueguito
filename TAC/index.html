@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../src/worldIcon.ico">
     <title>TAC</title>
 
     <link rel="stylesheet" href="assets/style.css">
@@ -18,7 +19,7 @@
     <section class="form">
         <fieldset class="form-aux">
             <h2 class="form-titulo">Inicia Sesion</h2>
-                <form class="form-content">
+                <form class="form-content" action="main.html">
                     Usuario:<br>
                     <input type="text" id="apodo" placeholder="Ej: Juan Carlos"><br>
                     Elije un pais:<br>
@@ -29,7 +30,7 @@
                         <option value="3">Chile</option>
                         <option value="4">Uruguay</option>
                     </select> <br>
-                    <button class="btn" id="Enviar" onclick="jugar()">Jugar</button>
+                    <a href="main.html"><button class="btn" id="Enviar" onclick="jugar()">Jugar</button></a>
                 </form>
         </fieldset>
     </section>
