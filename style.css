@@ -18,36 +18,37 @@ body{
 }
 /*para poner un margin y un paddig estandar*/
 .padder{
-    padding: 10px;
+    padding: 50px;
 }
 
 .marginner{
-    margin: 5px;
+    margin: 50px;
 }
+/*###################################################################################*/
 /*estilos especificos*/
-.registro-holder{
-    width: 50%;
-    background-color: black;
-
-    border: 15px solid rgb(58, 58, 58);
+.all-holder{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+.categorias-holder{
+    width: 25%;
+    background-color: rgb(213, 216, 33);
 
 }
-
-.marco-style{
-    display: flex;
-
-    overflow-x: auto;
-
-    max-height: 450px;
-    min-height: 450px;
-
-    padding-top: 10%;
-    width: 50%;
-
-    background-color: brown;
+.games-holder{
+    width: 75%;
+    background-color: rgb(255, 0, 0);   
 }
-.img-marco{
-    height: 200px;
-    width: 150px;
-    border-radius: 5px;
+img{
+    /*
+    width:  50%;
+    height: 100%;
+    */
+    width: 250px;
+    height: 500px;
+}
+h1{
+    margin: 0;
+    padding: 0;
 }
