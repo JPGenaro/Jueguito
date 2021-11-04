@@ -33,11 +33,13 @@ body{
 }
 .categorias-holder{
     width: 25%;
+    height: 100%;
     background-color: rgb(213, 216, 33);
 
 }
 .games-holder{
     width: 75%;
+    height: 100%;
     background-color: rgb(255, 0, 0);   
 }
 img{
@@ -46,7 +48,7 @@ img{
     height: 100%;
     */
     width: 250px;
-    height: 500px;
+    height: 250px;
 }
 h1{
     margin: 0;
