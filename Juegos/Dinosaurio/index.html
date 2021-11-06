@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../src/dinoIcon.ico">
     <title>Dinosaurio</title>
     <link rel="stylesheet" href="./style.css">
 
 
 </head>
 <body>
-    <div id="board">    
-        
+
+    <div id="board">   
         <div id="fondo" class="fondo">
             <img src="./src/fondo.png" alt="fondo" id="f1">
         </div>
@@ -20,7 +19,9 @@
             <img src="./src/fondo.png" alt="fondo" id="f2">
         </div>
         <div id="scoreContainer">
-            Score: <span id="score">0</span>
+            Distancia: <span id="score">0</span>
+            <p></p>
+            Record: <span id="record">0</span>
         </div>
         <div id="player">
             <img src="./src//dinosaurio1.png" alt="player dino" id="dino">
@@ -28,11 +29,15 @@
         <div id="cactus" class="cactusMove">
             <img src="./src/cactus.png" alt="cactus">
         </div>
+        <div class="game-over">GAME OVER</div>
     </div>
     <div class="boton-main">
         <button id="buttonPlayStop" class="button"></button>
         <button id="buttonRestart">Restart Game</button>
     </div>
+
+    
+
     <script src="main.js"></script>
 </body>
 </html>
