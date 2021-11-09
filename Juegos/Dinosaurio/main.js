@@ -1,3 +1,10 @@
+// DINO GAME //
+// Version 1.1 //
+
+
+
+
+///// VARIABLES /////
 const player = document.getElementById('player');
 const cactus = document.getElementById('cactus');
 const fondo = document.getElementById('f1');
@@ -7,8 +14,12 @@ const restart = document.getElementById('buttonRestart');
 const board = document.getElementById('board');
 var dinosaurio = 0;
 const buttonPlayStop = document.getElementById("buttonPlayStop");
-let score = 0
+var score = 0
+var record = 0;
 var dino = document.getElementById('dino');
+var muerto = false;
+var gameOver = document.querySelector(".game-over");
+
 ElegirDinosaurio();
 Pause();
 
@@ -16,39 +27,34 @@ Pause();
 ///// EVENTOS /////
 // teclas //
 board.addEventListener("click",function(){
-    player.classList.add("playerJump");
-    if(buttonPlayStop.classList.contains("play")){
-        pass;
-    }
-    else{
-        Reanudar();
-        buttonPlayStop.classList.add("play");
-    }
-})
+    Moverse();
+});
 document.addEventListener("keydown", function(e) {
     if (e.keyCode == 32) {
-        player.classList.add("playerJump");
-        if(buttonPlayStop.classList.contains("play")){
-            pass;
-        }
-        else{
-            Reanudar();
-            buttonPlayStop.classList.add("play");
-        }
+        Moverse();
     }
 });
-document.addEventListener("keyup", (event) => {
+document.addEventListener("keydown", (event) => {
     if (event.key == "ArrowUp" || event.key.toLowerCase() == "w") {
+        Moverse();
+    }
+});
+function Moverse(){
+    if(muerto == false){
         player.classList.add("playerJump");
         if(buttonPlayStop.classList.contains("play")){
-            pass;
+            
         }
         else{
             Reanudar();
             buttonPlayStop.classList.add("play");
         }
     }
-});
+    else{
+        RestartGame();
+    }
+    
+}
 
 // Animacion Salto //
 player.addEventListener("animationend",() =>{
@@ -63,6 +69,7 @@ restart.addEventListener("click",() => {
 ///// INTERVALOS DE JUEGO /////
 setInterval(() => {
     checkCondition();
+
 },20);
 
 
@@ -77,8 +84,10 @@ function checkCondition() {
         && cactus.offsetLeft > player.offsetLeft
         && (player.offsetTop >= (cactus.offsetTop - player.offsetHeight))
     ) {
-        window.alert("Game Over");
-        RestartGame();
+        Pause();
+        muerto = true;
+        gameOver.classList.add("gameOver");
+        gameOver.style.display = "block";
     }
 }
 
@@ -88,12 +97,15 @@ function random(min, max) {
 }
 function ElegirDinosaurio(){
     dinosaurio = random(1,2);
-    
-    if(dinosaurio == 1){
-        dino.src = "./src//dinosaurio1.png";
-    }
-    else{
-        dino.src = "./src/dinosaurio2";
+    switch(dinosaurio){
+        case 1:
+            dino.src = "./src/dinosaurio1.png";
+            break;
+        case 2:
+            dino.src = "./src/dinosaurio2.png";
+            break;
+        
+        
     }
 }
 
@@ -103,7 +115,7 @@ function ReanudarScore(){
     scoreInterval = setInterval(() => {
         score++;
         document.getElementById('score').innerHTML = score;
-    },2000);
+    },20);
 }
 
 // Pausar/Reanudar Juego //
@@ -129,13 +141,21 @@ function Reanudar() {
 function RestartGame(){
     ElegirDinosaurio();
     Pause();
-    score=0;
-    document.getElementById('score').innerHTML = score;
+    
+    muerto = false;
+    gameOver.style.display = "none";
+    
     cactus.classList.remove("cactusMove");
     player.classList.remove("playerJump");
     if(buttonPlayStop.classList.contains("play")){
         buttonPlayStop.classList.remove("play");
     }
+    if(record<score){
+        record = score;
+        document.getElementById('record').innerHTML = record;
+    }
+    score=0;
+    document.getElementById('score').innerHTML = score;
     void cactus.offsetWidth;
     cactus.classList.add("cactusMove");
     
@@ -147,7 +167,10 @@ function RestartGame(){
 buttonPlayStop.addEventListener('click', () => {
     buttonPlayStop.classList.toggle("play");
     if(buttonPlayStop.classList.contains("play")){
-        Reanudar();
+        if(muerto != true){
+            Reanudar();
+        }
+        
     }
     else{
        Pause(); 

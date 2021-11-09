@@ -7,10 +7,11 @@
     width: 100%;
     height: 500px;
     position: relative;
+    overflow: hidden;
 
 }
 #player{
-    
+    /*border: red solid 1px;*/
     width: 70px;
     height: 70px;
     position: absolute;
@@ -32,9 +33,10 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    animation: backgroundMove 2.5s linear infinite;
+    animation: backgroundMove 2s linear infinite;
 }
 #cactus{
+    /*border: rgb(0, 0, 0) solid 1px;*/
     position: absolute;
     width: 55px;
     height: 80px;
@@ -56,14 +58,33 @@
     color: white;
     font-size: 30px;
     text-align: center;
+    vertical-align: middle;
     font-family: sans-serif;
 }
+
+
+
+.game-over{
+    display: none;
+
+    position: absolute;
+    width: 100%;
+
+    top: 150px;
+    text-align: center;
+    color: #7e928b;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+}
+
 
 /* BOTON */
 .boton-main{
     display: flex;
     justify-content: center;
     margin: 10px;
+    
 }
 .button.play {
     border-style: solid;
@@ -72,6 +93,7 @@
   
   .button {
     border: 0;
+    font-size: 40px;
     background: transparent;
     box-sizing: border-box;
     width: 0;
@@ -95,6 +117,9 @@
 }
 .cactusMove{
     animation: cactusMove 2s linear infinite;
+}
+.gameOver{
+    animation: gameOver 1s ease-out;
 }
 
 @keyframes playerJump{
@@ -148,5 +173,13 @@
     }
     100%{
         right: 100%;
+    }
+}
+@keyframes gameOver{
+    0%{
+        top: -30px;
+    }
+    100%{
+        top: 150px;
     }
 }
