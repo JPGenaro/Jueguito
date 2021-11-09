@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -7,25 +7,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="src/mainIcon.ico">
     <title>Jueguitos Rancios</title>
-
-    
 </head>
-<body style="background-color: black;">
-    <div class="flex-container-column all-holder">
-
-            <div class="flex-container-column categorias-holder marginner">
-                <h1>
-                    Hola
+<body style="background-color: black; text-align: center;">
+    <div style="color: white; padding: 10px; padding-top: 0px;">
+        www.JuegosTruchos.com
+    </div>
+    <div class="flex-container-row all-holder">
+        <div class="flex-container-column categorias-holder">
+            <h1 class="holder-title">Categorias</h1><br>
+            <h2><a href="#juegosA" style="color: black">Categoría 1</a></h2><br>
+            <h2><a href="#juegosB" style="color: black">Categoría 2</a></h2><br>
+            <h2><a href="#juegosC" style="color: black">Categoría 3</a></h2><br>
+        </div>
+        <!-- Contenedor de todos los juegos-->
+        <div class="games-holder">
+            <div class="flex-container-column">
+                <h1 class="categorias-title" id="juegosA">
+                    Categoría 1
                 </h1>
-                <img src="https://media.istockphoto.com/photos/confused-man-with-crossed-arms-picture-id523390597" alt="">
+                <div class="flex-container-row fr-games">
+                    <!-- Dinosaur Conteiner -->
+                    <div class="flex-container-column games-holder-style marginner" href="TAC/index.html">
+                        <a href="Juegos/Dinosaurio/index.html" style="color:white;">
+                            <h2 class="marginner">Dinosaurio</h2>
+                            <img class="marginner" src="src/dinoIcon.ico" alt="dinosaurio google">
+                        </a>
+                    </div>
+                    <!-- Tac Conteiner -->
+                    <div class="flex-container-column games-holder-style marginner">
+                        <a href="./TAC/indexTac.html" style="color:white;">
+                            <h2 class="marginner">
+                                TAC
+                            </h2>
+                            <img class="marginner" src="src/worldIcon.ico" alt="planeta tierra pixel art">
+                        </a>
+                    </div>
+                </div>
             </div>
-
-            <div class="flex-container-column marginner games-holder marginner">
-                <img src="https://media.istockphoto.com/photos/confused-man-with-crossed-arms-picture-id523390597" alt="">
-                
+            <div class="flex-container-column">
+                <h1 class="categorias-title" id="juegosB">
+                    Categoría 2
+                </h1>
+                <div class="flex-container-row fr-games">
+                    <!-- Game Conteiner -->
+                    <div class="flex-container-column games-holder-style marginner">
+                        <a href="" style="color:white;">
+                            <h2 class="marginner">titulojuego</h2>
+                            <img class="marginner" src="src/worldIcon.ico">
+                        </a>
+                    </div>
+                    <!-- Game Conteiner -->
+                    <div class="flex-container-column games-holder-style marginner">
+                        <a href="" style="color:white;">
+                            <h2 class="marginner">titulojuego</h2>
+                            <img class="marginner" src="src/worldIcon.ico">
+                        </a>
+                    </div>
+                </div>
             </div>
+            <div class="flex-container-column">
+                <h1 class="categorias-title" id="juegosC">
+                    Categoría 3
+                </h1>
+                <div class="flex-container-row fr-games">
+                    <!-- Game Conteiner -->
+                    <div class="flex-container-column games-holder-style marginner">
+                        <a href="" style="color:white;">
+                            <h2 class="marginner">titulojuego</h2>
+                            <img class="marginner" src="src/worldIcon.ico">
+                        </a>
+                    </div>
+                    <!-- Game Conteiner -->
+                    <div class="flex-container-column games-holder-style marginner">
+                        <a href="" style="color:white;">
+                            <h2 class="marginner">titulojuego</h2>
+                            <img class="marginner" src="src/worldIcon.ico">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-<script src="JavaScript.js"></script>
-
+<script src="main.js"></script>
 </html>
