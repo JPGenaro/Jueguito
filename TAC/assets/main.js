@@ -1,9 +1,13 @@
-import {Pais} from "./Pais.js";
+class Pais{
+    constructor(nombre){
+        this.pais_nombre = nombre;
+    }
+}
 
 var apodo;
-pais = new Pais(Argentina);
+let pais_1 = new Pais("Argentina");
 
 // Cargar datos del usuario
 function jugar(){
-    console.log(pais);
+    console.log(pais_1.pais_nombre);
 }
