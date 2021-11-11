@@ -6,7 +6,6 @@
 
 const board = document.getElementById("board");
 
-
 var game = document.querySelector(".game");
 var tiempo = 0;
 var velocidad = 10;
@@ -37,6 +36,7 @@ var direccionX = 0;
 var direccionY = 0;
 
 ///// EVENTOS /////
+
 meta.addEventListener("mouseover", function(){
     Ganar();
 });
@@ -47,16 +47,13 @@ board.addEventListener("mousemove", (event) =>{
     player.style.left = x + "px";
     player.style.top = y + "px";
     document.body.style.cursor = "none";
-
 });
 
-
 ///// INTERVALOS /////
+
 var loop = setInterval(() => {
-    
     MoverIzquierda();
     MoverDerecha();
-    
 },20);
 setInterval(() => {
     detectarColisiones();
@@ -73,15 +70,14 @@ var seconds = setInterval(() => {
     */
 },1000);
 
-
 ///// FUNCIONES /////
+
 function Ganar(){
-    
     game.style.display = "block";
     game.innerHTML = "Ganaste";
     game.classList.add("BajarLento");
-    
 }
+
 function Coliciones(a,b){
     return !(
         (a.offsetTop + a.offsetHeight) < (b.offsetTop) ||
@@ -90,7 +86,6 @@ function Coliciones(a,b){
         (a.offsetLeft) > (b.offsetLeft + b.offsetWidth)
     );
 }
-
 
 function detectarColisiones(){
     for(var i = 0; i < obstaculos.length; i++){
@@ -102,23 +97,20 @@ function detectarColisiones(){
             clearInterval(seconds);
         }
     }
-
 }
-
 
 function MoverIzquierda(){
     for (var i = 0 ; i < obstaculosX.length; i++) {
         var aux = obstaculosX[i];
-
         aux.style.left = parseInt(aux.style.left) - velocidad +"px";
         if(parseInt(aux.style.left) <= 0){
             obstaculosX.splice(i,1);
             board.removeChild(aux);
             console.log("borrar");
         }
-        
     }
 }
+
 function MoverDerecha(){
     for (var i = 0 ; i < obstaculosXX.length; i++) {
         var aux = obstaculosXX[i];
@@ -128,10 +120,8 @@ function MoverDerecha(){
             board.removeChild(aux);
             console.log("BORRAR");
         }
-        
     }
 }
-
 
 
 //////////////////////////////////// NIVEL 1 ///////////////////////////////////////////////
@@ -145,7 +135,6 @@ function Musica(){
     audio.src = "canciones/cancion1.mp3";
     audio.load();
     audio.play();
-    
 }
 
 Musica();
@@ -161,9 +150,7 @@ nivel1 = setInterval(() => {
         for(var i = 0; i < 20; i++){
             face1();
         }
-
     }
-    
     if(tiempo == 3){
         for(var i = 0; i < 20; i++){
             face2();
@@ -176,10 +163,7 @@ nivel1 = setInterval(() => {
             face3();
         }
     }
-    
 },500);
-
-
 
 function face1(){
     generarDerechaIzquierda();
@@ -197,7 +181,6 @@ function face3(){
 }
 
 function generarDerechaIzquierda(){
-    
     var aux = document.createElement('div');
     aux.classList.add("cuadraditos");
     aux.style.top = y+ "%";
@@ -207,8 +190,8 @@ function generarDerechaIzquierda(){
     obstaculos.push(aux);
    
 }
+
 function generarIzquierdaDerecha(){
-   
     var aux = document.createElement('div');
     aux.classList.add("cuadraditos");
     aux.style.top = y2+ "%";
@@ -217,4 +200,3 @@ function generarIzquierdaDerecha(){
     obstaculosXX.push(aux);
     obstaculos.push(aux);
 }
-

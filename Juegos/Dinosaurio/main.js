@@ -1,9 +1,6 @@
 // DINO GAME //
 // Version 1.2 //
 
-
-
-
 ///// VARIABLES /////
 const player = document.getElementById('player');
 const cactus = document.getElementById('cactus');
@@ -25,10 +22,8 @@ var crearCactus = true;
 ElegirDinosaurio();
 Pause();
 
-
-
-
 ///// EVENTOS /////
+
 // teclas //
 board.addEventListener("click",function(){
     Moverse();
@@ -45,7 +40,6 @@ document.addEventListener("keydown", (event) => {
 });
 function Moverse(){
     if(muerto == false){
-        
         if(buttonPlayStop.classList.contains("play")){
             player.classList.add("playerJump");
         }
@@ -57,7 +51,6 @@ function Moverse(){
     else{
         RestartGame();
     }
-    
 }
 
 // Animacion Salto //
@@ -71,13 +64,11 @@ restart.addEventListener("click",() => {
 
 
 ///// INTERVALOS DE JUEGO /////
+
 var loop = setInterval(() => {
     checkCondition();
     createCactus();
-    
 },20);
-
-
 
 
 ///// FUNCIONES DE JUEGO /////
@@ -123,11 +114,8 @@ function ElegirDinosaurio(){
         case 3:
             dino.src = "./src/dinosaurio3.png";
             break;
-        
-        
     }
 }
-
 
 // Funcion para reanudar el score //
 function ReanudarScore(){
@@ -155,14 +143,12 @@ function Reanudar() {
     fondo.style.animationPlayState = "running";
     fondo2.style.animationPlayState = "running";
     ReanudarScore();
-    
 }
 
 // Reiniciar Juego //
 function RestartGame(){
     ElegirDinosaurio();
     Pause();
-    
     muerto = false;
     gameOver.style.display = "none";
     board.removeChild(cactus2);
@@ -180,13 +166,11 @@ function RestartGame(){
     document.getElementById('score').innerHTML = score;
     void cactus.offsetWidth;
     cactus.classList.add("cactusMove");
-    
 }
 
 // Crear Cactus //
 function createCactus() {
     if(crearCactus == true && fondo.width/2 > cactus.offsetLeft){
-
         cactus2 = document.createElement('div');
         img = document.createElement('img');
         img.src = "./src/cactus.png";
@@ -216,11 +200,8 @@ buttonPlayStop.addEventListener('click', () => {
         if(muerto != true){
             Reanudar();
         }
-        
     }
     else{
        Pause(); 
     }
-    
-
 })
