@@ -1,0 +1,168 @@
+*{
+    margin: 0px;
+    
+}
+body{
+    background-color: rgb(102, 2, 49);
+}
+
+
+
+#board{
+    background-color: rgb(102, 2, 49);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.player{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    z-index: 1;
+}
+
+#meta{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(255, 255, 255);
+    animation: GirarDerecha 2s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.meta2{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: GirarIzquierda 1s linear infinite;
+}
+.meta3{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(255, 255, 255);
+    animation: GirarDerecha 1s linear infinite;
+}
+
+
+.Alinear{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game{
+    display: none;
+    position: absolute;
+
+    top: 150px;
+    background-color: black;
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+
+    border: black solid 10px;
+}
+.btn-start{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    border: black solid 10px;
+    background-color: black;
+    color: #b3b3b3;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn-start:hover{
+    background-color: #b3b3b3;
+    color: black;
+}
+
+.cuadraditos{
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(141, 170, 197);
+}
+
+
+/* ANIMACIONES */
+.BajarLento{
+    animation: BajarLento 1s ease-out;
+}
+.DerechaRecto{
+    animation: DerechaRecto 1s linear;
+}
+
+@keyframes GirarDerecha{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes GirarIzquierda{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes BajarLento{
+    0%{
+        top: -30px;
+    }
+    100%{
+        top: 150px;
+    }
+}
+
+
+@keyframes BajarRecto{
+    0%{
+        top: 0%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+@keyframes DerechaRecto{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes IzquierdaRecto{
+    0%{
+        left: 0%;;
+    }
+    100%{
+        top: 100%;
+    }
+}
