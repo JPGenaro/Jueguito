@@ -1,9 +1,7 @@
-import {Pais} from "./Pais.js";
-
-var apodo;
-pais = new Pais(Argentina);
+let modulo = require('./Pais');
+let computador = new modulo.Pais("Argentina");
 
 // Cargar datos del usuario
 function jugar(){
-    console.log(pais);
+    console.log(computador.getDatos());
 }
