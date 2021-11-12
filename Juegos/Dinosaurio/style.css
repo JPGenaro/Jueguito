@@ -8,7 +8,6 @@
     height: 500px;
     position: relative;
     overflow: hidden;
-
 }
 #player{
     /*border: red solid 1px;*/
@@ -17,13 +16,12 @@
     position: absolute;
     bottom: 240px;
     left: 13%;
-    
 }
 #player img{
     width: 100%;
     height: 100%;
-    
 }
+
 .fondo{
     position: absolute;
     width: 100%;
@@ -42,7 +40,6 @@
     height: 80px;
     bottom: 240px;
     right: 0%;
-    
 }
 .cactus img{
     max-width: 100%;
@@ -62,14 +59,10 @@
     font-family: sans-serif;
 }
 
-
-
 .game-over{
     display: none;
-
     position: absolute;
     width: 100%;
-
     top: 150px;
     text-align: center;
     color: #7e928b;
@@ -84,14 +77,12 @@
     display: flex;
     justify-content: center;
     margin: 10px;
-    
 }
 .button.play {
     border-style: solid;
     border-width: 37px 0 37px 60px;
-  }
-  
-  .button {
+}
+.button {
     border: 0;
     font-size: 40px;
     background: transparent;
@@ -103,12 +94,11 @@
     cursor: pointer;
     border-style: double;
     border-width: 0px 0 0px 60px;
-  }
+}
   
-  .button:hover {
+.button:hover {
     border-color: transparent transparent transparent #404040;
-  }
-
+}
 
 
 /* ANIMACIONES */ 
@@ -153,7 +143,6 @@
     90%{
         bottom: 280px;
     }
-       
     100%{
         bottom: 240px;
     }
@@ -183,6 +172,3 @@
         top: 150px;
     }
 }
-
-
-
