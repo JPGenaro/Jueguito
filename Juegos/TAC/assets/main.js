@@ -9,8 +9,6 @@ class Pais {
     }
 }
 
-let lista_paises = new ArrayList();
-
 const pais_1 = new Pais("Argentina");
 const pais_2 = new Pais("Brasil");
 const pais_3 = new Pais("Bolivia");
@@ -22,8 +20,9 @@ function creacion(){
     if (name != "") {
         var eleccion = document.getElementById("comboBox");
         var selected = eleccion.options[eleccion.selectedIndex].text;
+        console.log(selected);
 
-        document.getElementById("pais_elegido").innerHTML = selected;
+        document.getElementById("pais_elegido").innerText = "Pais" + selected;
     }else{
         name = "vacio";
         console.log(name);
