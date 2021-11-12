@@ -1,1 +1,7 @@
 Informacion de variables y listas
+
+Pais1 = Argentina
+Pais2 = Brasil
+Pais3 = Bolivia
+Pais4 = Chile
+Pais5 = Uruguay
