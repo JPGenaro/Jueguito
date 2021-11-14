@@ -1,1 +1,9 @@
-Informacion de variables y listas
+INFORMACION DEL JUEGO
+
+//Paises
+Pais1 = Argentina
+Pais2 = Brasil
+Pais3 = Bolivia
+Pais4 = Chile
+Pais5 = Uruguay
+
